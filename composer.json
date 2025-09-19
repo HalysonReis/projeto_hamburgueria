@@ -1,0 +1,19 @@
+{
+    "name": "halysonreis/projeto_hamburgueria",
+    "description": "Sistema de cadastro de prudutos",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Halyson da Silva dos Reis"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        },
+        "files": [
+            ""
+        ]
+    },
+    "require": {}
+}
