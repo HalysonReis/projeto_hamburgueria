@@ -6,13 +6,13 @@ class Routes{
         return [
             "get" => [
                 "/" => 'HomeController@index',
-                "/cadastrar" => "InsertController@index",
-                "/login" => "LoginController@index",
-                "/listar" => "SelectController@index",
+                "cadastrar" => "InsertController@index",
+                "login" => "LoginController@index",
+                "listar" => "SelectController@index",
             ],
             "post" => [
-                "/update" => "UpdateController@product",
-                "/update/user" => "UpdateController@user",
+                "update" => "UpdateController@product",
+                "update/user" => "UpdateController@user",
             ]
         ];
     }

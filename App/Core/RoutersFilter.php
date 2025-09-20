@@ -30,5 +30,7 @@ class RoutersFilter{
         if($router){
             return $router;
         }
+
+        return 'NotFoundController@index';
     }
 }
