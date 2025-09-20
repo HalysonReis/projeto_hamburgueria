@@ -1,2 +1,6 @@
 <?php 
-include("./App/Views/login.php");
+include('./vendor/autoload.php');
+
+use App\Core\Router;
+
+Router::run();

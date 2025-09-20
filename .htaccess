@@ -1,6 +1,5 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /projeto_hamburgueria/
 
     # Permitir acessar arquivos PHP sem extensão .php
     RewriteCond %{REQUEST_FILENAME}.php -f
