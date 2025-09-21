@@ -1,0 +1,249 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-bottom: .5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.header_home {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.img_logo {
+    width: 60px;
+}
+
+.link_login {
+    padding: .2rem 1rem;
+    background-color: #BD9B4F;
+    color: white;
+    text-decoration: none;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.content_about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+.content_logo {
+    width: 300px;
+    height: 300px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    background-color: white;
+    z-index: 2;
+}
+
+.img_logo_grande {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.content_informacoes {
+    width: 100%;
+    height: auto;
+    padding: 50px 1rem 30px 1rem;
+    margin-top: -30px;
+    background-color: #421705;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.content_localizacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.local_text {
+    font-size: 1rem;
+    color: white;
+}
+
+.conteiner_sobre_inferior {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.content_sobre_inferior {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.conteiner_cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+.card_item {
+    width: 290px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+}
+
+.content_img_lanche {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_lanche {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.content_info_lanche {
+    width: 100%;
+    padding: 0rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.title_lanche {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: black;
+}
+
+.sobre_lanche {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+}
+
+.content_preco {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text_preco {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+}
+
+.preco_lanche {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #AF460C;
+}
+
+
+/* LOGIN AREA */
+
+.loginsection {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 2rem;
+}
+
+.title_login {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.form_login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.content_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.input_label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: .3rem;
+}
+
+.btn_login {
+    width: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    background-color: #BD9B4F;
+    color: white;
+    border-radius: .5rem;
+}
