@@ -2,7 +2,7 @@
 <body>
     <header class="header_home">
         <img src="./Public/assets/logo_somente_hamburguer_trans.png" class="img_logo" alt="logo">
-        <a href="http://localhost/projeto_hamburgueria/login" class="link_login">entrar</a>
+        <a href="./login" class="link_login">entrar</a>
     </header>
     <main class="content_principal">
         <section class="content_about">

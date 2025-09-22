@@ -9,9 +9,10 @@ class Routes{
                 "cadastrar" => "InsertController@index",
                 "login" => "LoginController@index",
                 "listar" => "SelectController@index",
+                "editar" => "UpdateController@index",
             ],
             "post" => [
-                "update" => "UpdateController@product",
+                // "update" => "UpdateController@product",
                 "update/user" => "UpdateController@user",
             ]
         ];

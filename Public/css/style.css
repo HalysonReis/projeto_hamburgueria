@@ -23,7 +23,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
     padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .img_logo {
@@ -49,6 +53,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2rem 0rem;
+    padding-top: 100px;
 }
 
 .content_logo {
@@ -132,6 +137,7 @@ body {
     justify-content: center;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: .5rem;
+    position: relative;
 }
 
 .content_img_lanche {
@@ -141,6 +147,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .img_lanche {
@@ -222,6 +229,7 @@ body {
 
 .content_input {
     width: 100%;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     gap: .2rem;
@@ -234,6 +242,8 @@ body {
 
 .input {
     border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: .5rem 1rem;
+    outline: none;
     border-radius: .3rem;
 }
 
@@ -245,5 +255,172 @@ body {
     border: none;
     background-color: #BD9B4F;
     color: white;
+    border-radius: .5rem;
+}
+
+/* MENU APOS LOGIN */
+
+.list_menu {
+    flex: auto;
+    height: 100%;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all .2s ease-in;
+}
+
+.link_list_item {
+    text-decoration: none;
+    color: black;
+    transition: all .2s ease-in;
+}
+
+.link_list_item:hover {
+    color: #AF460C;
+    transition: all .2s ease-in;
+}
+
+.activeMenu {
+    color: #BD9B4F;
+    transition: all .2s ease-in;
+}
+
+/* CADASTRO LANCHE */
+
+.conteiner_principal {
+    padding: 0rem 1rem;
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario {
+    width: 100%;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0rem;
+}
+
+.content_img {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.text_input {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.label_img {
+    width: 100%;
+    max-width: 250px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.label_img:hover {
+    background-color: rgb(245, 245, 245);
+    transition: all .2s ease-in;
+}
+
+.icon_uploads {
+    font-size: 2rem;
+    transition: all .2s ease-in;
+}
+
+.label_img:hover .icon_uploads {
+    color: #AF460C;
+    transition: all .2s ease-in;
+}
+
+.input_img_lanche {
+    position: absolute;
+    opacity: 0;
+}
+
+.input_area {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+}
+
+.btns_content {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn_form {
+    padding: .5rem 1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn_cancel {
+    background-color: white;
+    color: #AF460C;
+    border: 1px solid #AF460C;
+}
+
+.btn_submit {
+    background-color: #007E70;
+    color: white;
+    border: 1px solid #007E70;
+}
+
+/* LISTAR LANCHES */
+
+.icon_deletar {
+    color: red;
+}
+
+.icon_editar {
+    color: #007E70;
+}
+
+.content_editar_lanche {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: .2rem;
+    display: flex;
+    gap: .5rem;
+    background-color: white;
     border-radius: .5rem;
 }
