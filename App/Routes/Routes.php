@@ -10,6 +10,7 @@ class Routes{
                 "login" => "LoginController@index",
                 "listar" => "SelectController@index",
                 "editar" => "UpdateController@index",
+                "usuario" => "UpdateController@user",
             ],
             "post" => [
                 // "update" => "UpdateController@product",

@@ -9,7 +9,7 @@ $paginaAtual = 'listar';
         <section class="conteiner_cards">
             <div class="card_item">
                 <div class="content_editar_lanche">
-                    <a href="./" class="link_editar_lanche"><i class="bi bi-trash icon icon_deletar"></i></a>
+                    <i class="bi bi-trash icon icon_deletar" id="icon_deletar"></i>
                     <a href="./editar" class="link_editar_lanche"><i class="bi bi-pencil-square icon icon_editar"></i></a>
                 </div>
                 <div class="content_img_lanche">
@@ -26,5 +26,6 @@ $paginaAtual = 'listar';
             </div>
         </section>
     </main>
+    <script src="./Public/js/listar.js"></script>
 </body>
 </html>

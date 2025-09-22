@@ -1,4 +1,4 @@
-<form action="" method="post" class="formulario">
+<form action="" method="post" class="formulario" id="formulario">
     <div class="content_img">
         <p class="text_input">
             Imagem:
@@ -19,7 +19,8 @@
         <label class="text_input">
             Descrição:
         </label>
-        <textarea class="input_area" name="descricao" id="descricao"></textarea>
+        <textarea class="input_area" name="descricao" id="descricao" maxlength="200"></textarea>
+        <span class="max_letter"><span id="max_int_palavra" data-number="200">200</span> palavras</span>
     </div>
     <div class="content_input">
         <label class="text_input">
@@ -29,6 +30,6 @@
     </div>
     <div class="btns_content">
         <button type="reset" class="btn_form btn_cancel" id="btn_cancel">Cancel</button>
-        <button type="submit" class="btn_form btn_submit" id="btn_cadastro">Cadastrar</button>
+        <button type="submit" class="btn_form btn_submit" id="btn_confirmar">Cadastrar</button>
     </div>
 </form>

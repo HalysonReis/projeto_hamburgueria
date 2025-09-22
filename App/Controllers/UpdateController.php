@@ -7,4 +7,7 @@ class UpdateController {
     public function index(){
         ShowPages::getPage('update.php');
     }
+    public function user(){
+        ShowPages::getPage('usuario.php');
+    }
 }

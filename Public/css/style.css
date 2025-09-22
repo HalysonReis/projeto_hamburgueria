@@ -16,6 +16,25 @@ body {
     color: white;
 }
 
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper .bi-eye,
+.input-wrapper .bi-eye-slash {
+    position: absolute;
+    top: 2rem;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.valida_senha {
+    font-size: .8rem;
+    font-weight: 400;
+    color: rgb(255, 113, 113);
+}
+
 
 .header_home {
     width: 100%;
@@ -322,6 +341,13 @@ body {
     gap: .5rem;
 }
 
+.img_preview {
+    display: none;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
 .text_input {
     font-weight: 600;
     font-size: 1rem;
@@ -371,6 +397,12 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.5);
     padding: .5rem 1rem;
     border-radius: .3rem;
+}
+
+.max_letter {
+    font-size: .8rem;
+    font-weight: 400;
+    color: #9b9b9b;
 }
 
 .btns_content {
@@ -423,4 +455,18 @@ body {
     gap: .5rem;
     background-color: white;
     border-radius: .5rem;
+}
+
+.btn_sweet_confirm {
+    background-color: #007E70;
+    border-color: #007E70;
+    color: white;
+    outline: none;
+    margin: 1rem;
+}
+
+.btn_sweet_cancel {
+    background-color: red;
+    color: white;
+    margin: 1rem;
 }

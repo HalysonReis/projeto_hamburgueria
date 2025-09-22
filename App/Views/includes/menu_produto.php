@@ -1,5 +1,5 @@
 <header class="header_home">
-    <img src="./Public/assets/logo_somente_hamburguer_trans.png" class="img_logo" alt="logo">
+    <a href="./"><img src="./Public/assets/logo_somente_hamburguer_trans.png" class="img_logo" alt="logo"></a>
     <ul class="list_menu">
         <li class="list_item">
             <a href="./listar" class="link_list_item <?php echo $paginaAtual == 'listar' ? 'activeMenu' : ''; ?>">listar</a>

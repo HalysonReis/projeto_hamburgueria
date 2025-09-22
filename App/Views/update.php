@@ -8,5 +8,7 @@ $paginaAtual = 'listar';
         <h1>Editar</h1>
         <?php include "./App/Views/includes/form_lanche.php";  ?>
     </main>
+    <script src="./Public/js/formulario.js"></script>
+    <script src="./Public/js/update.js"></script>
 </body>
 </html>

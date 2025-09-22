@@ -7,5 +7,6 @@ $paginaAtual = 'cadastro';
         <h1>Cadastro</h1>
         <?php include "./App/Views/includes/form_lanche.php";  ?>
     </main>
+    <script src="./Public/js/formulario.js"></script>
 </body>
 </html>
