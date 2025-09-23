@@ -11,4 +11,8 @@ class LoginController {
             echo $e->getMessage();
         }
     }
+
+    public function login($data){
+        var_dump($data);
+    }
 }

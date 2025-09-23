@@ -6,7 +6,7 @@ use App\Support\ShowPages;
 class HomeController{
     public function index(){
         try {
-            ShowPages::getPage();   
+            ShowPages::getPage();
         } catch (\Throwable $e) {
             echo $e->getMessage();
         }

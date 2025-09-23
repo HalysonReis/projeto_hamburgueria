@@ -3,7 +3,6 @@ namespace App\Controllers;
 
 class NotFoundController{
     public function index(){
-        // http_response_code(404);
-        echo "nao existe";
+        http_response_code(404);
     }
 }

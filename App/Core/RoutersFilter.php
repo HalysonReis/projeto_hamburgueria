@@ -25,8 +25,26 @@ class RoutersFilter{
         return null;
     }
 
+    public function dynamicRouter(){
+        foreach ($this->routesRegistered[$this->method] as $index => $route) {
+            $regex = str_replace('/', "\/", $index);
+            if($index !== '/' && preg_match("/^$regex$/", trim($this->uri, '/'))){
+                $routerFound = $route;
+                break;
+            }else {
+                $routerFound = null;
+            }
+        }
+        return $routerFound;
+    }
+
     public function get(){
         $router = $this->simpleRouter();
+        if($router){
+            return $router;
+        }
+
+        $router = $this->dynamicRouter();
         if($router){
             return $router;
         }

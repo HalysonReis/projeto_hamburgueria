@@ -7,4 +7,7 @@ class InsertController {
     public function index(){
         ShowPages::getPage('cadastro.php');
     }
+    public function insert($data){
+        var_dump($data);
+    }
 }

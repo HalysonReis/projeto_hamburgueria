@@ -24,10 +24,10 @@ class Controller {
             throw new \Exception("Método '$method' não existe");
         }
 
-        #$params = new ControllerParams;
+        $params = new ControllerParams;
 
-        #$params = $params->get($router);
+        $params = $params->get($router);
 
-        $controller->$method();
+        $controller->$method($params);
     }
 }
