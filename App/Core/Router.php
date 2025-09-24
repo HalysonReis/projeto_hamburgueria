@@ -14,7 +14,7 @@ class Router {
             $controller->excute($router);
 
         } catch (\Throwable $e) {
-            echo $e->getMessage();
+            messageError($e->getMessage());
         }
     }
 }

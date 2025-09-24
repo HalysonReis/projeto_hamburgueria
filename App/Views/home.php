@@ -26,7 +26,7 @@
                 </div>
             </div>
         </section>
-        <section class="conteiner_cards">
+        <section class="conteiner_cards" id="conteiner_cards">
             <div class="card_item">
                 <div class="content_img_lanche">
                     <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/2341858/db32281f079A0702.jpg" class="img_lanche">
@@ -42,5 +42,6 @@
             </div>
         </section>
     </main>
+    <script src="./Public/js/listarHome.js"></script>
 </body>
 </html>

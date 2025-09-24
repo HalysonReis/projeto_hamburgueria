@@ -1,4 +1,4 @@
-<form action="" method="post" class="formulario" id="formulario">
+<form action="./produto/editar/1" method="post" class="formulario" id="formulario">
     <div class="content_img">
         <p class="text_input">
             Imagem:
@@ -28,6 +28,7 @@
         </label>
         <input type="text" class="input" name="preco" id="preco">
     </div>
+    <?php echo getToken(); ?>
     <div class="btns_content">
         <button type="reset" class="btn_form btn_cancel" id="btn_cancel">Cancel</button>
         <button type="submit" class="btn_form btn_submit" id="btn_confirmar">Cadastrar</button>

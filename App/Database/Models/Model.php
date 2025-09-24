@@ -34,7 +34,7 @@ abstract class Model {
             return $prepare->execute($data);
             
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            messageError("Não foi possivel cadastrar o burguer");
         }
     }
 
@@ -60,7 +60,7 @@ abstract class Model {
             return $prepare->execute($data);
             
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            messageError("Não foi possivel editar");
         }
     }
 
@@ -76,7 +76,7 @@ abstract class Model {
             return $query->fetchAll(\PDO::FETCH_ASSOC);
             
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            messageError("Não foi possivel buscar os dados");
         }
     }
 
@@ -94,7 +94,7 @@ abstract class Model {
             return $prepare->fetch(\PDO::FETCH_ASSOC);
             
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            messageError("Não foi possivel selecionar");
         }
     }
 
@@ -110,7 +110,7 @@ abstract class Model {
             return $prepare->execute([$field => $value]);
             
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            messageError("Não foi possivel excluir o burguer");
         }
     }
 }

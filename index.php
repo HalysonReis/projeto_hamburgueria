@@ -7,4 +7,7 @@ use App\Core\Router;
 // var_dump($_SERVER);
 
 // echo "</pre>";
+
+session_start();
+
 Router::run();

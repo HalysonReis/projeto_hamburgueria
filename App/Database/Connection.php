@@ -5,12 +5,18 @@ class Connection {
     private static $connection = null;
 
     public static function connect(){
-        if(!self::$connection){
+        try {
+            if(!self::$connection){
             self::$connection = new \PDO("mysql:host=localhost;dbname=honorioburguer", "root", "h4L!50N%&i$", [
-                \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_OBJ
-            ]);
+                    \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_OBJ
+                ]);
+            }
+    
+            return self::$connection;
+            
+        } catch (\Throwable $th) {
+            http_response_code(500);
+            messageError();
         }
-
-        return self::$connection;
     }
 }

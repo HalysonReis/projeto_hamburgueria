@@ -38,4 +38,5 @@
 
     <!-- CSS externo ou interno -->
     <link rel="stylesheet" href="Public/css/style.css">
+    <script src="./Public/js/fetchJS.js"></script>
 </head>

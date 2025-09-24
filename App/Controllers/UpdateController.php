@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Database\Models\Product;
+use App\Support\Csrf;
 use App\Support\ShowPages;
 
 class UpdateController {
@@ -12,8 +13,9 @@ class UpdateController {
         ShowPages::getPage('usuario.php');
     }
 
-    public function editProdut($data){
-        var_dump($data);
+    public function editProduct($data){
+        // var_dump($data);
+        var_dump(Csrf::validateToken());
     }
 
     public function editUser($data){

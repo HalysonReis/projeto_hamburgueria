@@ -23,4 +23,5 @@
     <!-- CSS externo ou interno -->
     <link rel="stylesheet" href="Public/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./Public/js/fetchJS.js"></script>
 </head>
