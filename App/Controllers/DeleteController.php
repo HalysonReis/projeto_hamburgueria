@@ -2,11 +2,13 @@
 namespace App\Controllers;
 
 use App\Core\Request;
+use App\Support\TokenJwt;
 use App\Database\Models\Product;
 
 class DeleteController {
     public function produto($data){
         try {
+            TokenJwt::validaLogin();
             header('Content-Type: application/json');
 
             $id = $data[0];

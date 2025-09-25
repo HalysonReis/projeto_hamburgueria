@@ -94,7 +94,7 @@ abstract class Model {
             return $prepare->fetch(\PDO::FETCH_ASSOC);
             
         } catch (\PDOException $e) {
-            messageError("Não foi possivel selecionar ". $e->getMessage());
+            messageError("Não foi possivel selecionar ");
         }
     }
 

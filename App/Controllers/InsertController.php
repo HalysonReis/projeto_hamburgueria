@@ -3,16 +3,19 @@ namespace App\Controllers;
 
 use App\Core\Request;
 use App\Support\Csrf;
+use App\Support\TokenJwt;
 use App\Support\ShowPages;
 use App\Database\Models\Product;
 
 class InsertController {
     public function index(){
+        TokenJwt::validaLogin();
         ShowPages::getPage('cadastro.php');
     }
     public function insert(){
          try {
             header('Content-Type: application/json');
+            TokenJwt::validaLogin();
             $dataRequest = Request::all();
 
             if(!Csrf::validateToken()){

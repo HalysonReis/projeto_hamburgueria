@@ -1,5 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
     ErrorDocument 404 /404.php
 
     # Permitir acessar arquivos PHP sem extensão .php
@@ -11,3 +12,17 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 </IfModule>
+
+Options -Indexes
+
+RewriteRule ^vendor/ - [F,L]
+RewriteRule ^App/ - [F,L]
+
+<FilesMatch "\.(txt|log|ini|sql|env|json|lock)$">
+  Require all denied
+</FilesMatch>
+
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>

@@ -2,12 +2,14 @@
 namespace App\Controllers;
 
 use App\Core\Request;
-use App\Database\Models\Product;
-use App\Database\Models\User;
+use App\Support\TokenJwt;
 use App\Support\ShowPages;
+use App\Database\Models\User;
+use App\Database\Models\Product;
 
 class SelectController {
     public function index(){
+        TokenJwt::validaLogin();
         ShowPages::getPage('listar.php');
     }
 
@@ -24,6 +26,7 @@ class SelectController {
 
     public function getProduto($data){
         try {
+            TokenJwt::validaLogin();
             header('Content-Type: application/json');
             $product = new Product();
 
@@ -47,6 +50,7 @@ class SelectController {
 
     public function getUser(){
         try {
+            TokenJwt::validaLogin();
             header('Content-Type: application/json');
 
             $user = new User();
@@ -67,4 +71,25 @@ class SelectController {
         }
     }
 
+    public function getUserHome(){
+        try {
+            header('Content-Type: application/json');
+
+            $user = new User();
+            $user->setFeilds('instagram, endereco, horario');
+
+            $select = $user->findBy('id_user', 1);
+
+            if(!$select){
+                throw new \Exception("Usuário não encontrado");
+            }
+
+            $request = Request::toJson(["success" => true, "data" => $select]);
+            echo $request;
+
+        } catch (\Exception $e) {
+            $messageError = $e->getMessage();
+            messageError($messageError);
+        }
+    }
 }

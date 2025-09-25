@@ -29,6 +29,14 @@ body {
     color: black;
 }
 
+.icon_senha_login {
+    position: absolute;
+    top: 2rem;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+}
+
 .valida_senha {
     font-size: .8rem;
     font-weight: 400;
@@ -146,6 +154,7 @@ body {
     width: 100%;
     height: auto;
     text-align: center;
+    padding-bottom: 1rem;
 }
 
 .card_item {
@@ -253,6 +262,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: .2rem;
+    position: relative;
 }
 
 .input_label {

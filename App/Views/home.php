@@ -12,16 +12,16 @@
             <div class="content_informacoes">
                 <div class="content_localizacao">
                     <i class="bi bi-geo-alt icon"></i>
-                    <p class="local_text">R. José Antônio, 1870 - Centro, Campo Grande - MS, 79002-401, Brazil</p>
+                    <p class="local_text" id="text_rua">R. José Antônio, 1870 - Centro, Campo Grande - MS, 79002-401, Brazil</p>
                 </div>
                 <div class="conteiner_sobre_inferior">
                     <div class="content_sobre_inferior">
                         <i class="bi bi-clock icon"></i>
-                        <p class="local_text">Abrimos às 17:30</p>
+                        <p class="local_text">Abrimos às <span id="horario_text">17:30</span></p>
                     </div>
                     <div class="content_sobre_inferior">
                         <i class="bi bi-instagram icon"></i>
-                        <p class="local_text">@Honório’sBurger</p>
+                        <p class="local_text" id="instagram">@Honório’sBurger</p>
                     </div>
                 </div>
             </div>

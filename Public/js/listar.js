@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <img src="${burguer.src_imagem}" class="img_lanche">
             </div>
             <div class="content_info_lanche">
-                <p class="title_lanche">${burguer.id_burguer} - ${burguer.nome}</p>
+                <p class="title_lanche">${burguer.nome}</p>
                 <span class="sobre_lanche">${burguer.descricao}</span>
                 <div class="content_preco">
                     <span class="text_preco">A partir de:</span>

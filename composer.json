@@ -17,5 +17,7 @@
             "App/Helpers/UploadImage.php"
         ]
     },
-    "require": {}
+    "require": {
+        "firebase/php-jwt": "^6.11"
+    }
 }

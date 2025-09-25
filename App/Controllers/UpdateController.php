@@ -3,21 +3,26 @@ namespace App\Controllers;
 
 use App\Core\Request;
 use App\Support\Csrf;
+use App\Support\TokenJwt;
 use App\Support\ShowPages;
 use App\Database\Models\User;
 use App\Database\Models\Product;
 
 class UpdateController {
     public function index(){
+        TokenJwt::validaLogin();
+        
         ShowPages::getPage('update.php');
     }
     public function user(){
+        TokenJwt::validaLogin();
         ShowPages::getPage('usuario.php');
     }
 
     public function editProduct($data){
         try {
             header('Content-Type: application/json');
+            TokenJwt::validaLogin();
             $dataRequest = Request::all();
 
             if(!Csrf::validateToken()){
@@ -57,6 +62,7 @@ class UpdateController {
     public function editUser(){
         try {
             header('Content-Type: application/json');
+            TokenJwt::validaLogin();
             $dataRequest = Request::all();
 
             if(!Csrf::validateToken()){
@@ -70,6 +76,8 @@ class UpdateController {
             }
 
             $user = new User();
+
+            $dataRequest["senha"] = password_hash($dataRequest['senha'], PASSWORD_BCRYPT);
 
             $update = $user->update("id_user", 1, $dataRequest);
 
