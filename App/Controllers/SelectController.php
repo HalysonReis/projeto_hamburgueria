@@ -28,13 +28,13 @@ class SelectController {
             $product = new Product();
 
             if(empty($data)){
-                throw new \Exception("Burguer não informado.");
+                throw new \Exception("Burger não informado.");
             }
     
             $select = $product->findBy('id_burguer', $data[0]);
 
             if(!$select){
-                throw new \Exception("Burguer não cadastrado");
+                throw new \Exception("Burger não cadastrado");
             }
 
             $request = Request::toJson(["success" => true, "data" => $select]);
@@ -45,19 +45,17 @@ class SelectController {
         }
     }
 
-    public function getUser($data){
+    public function getUser(){
         try {
             header('Content-Type: application/json');
 
-            if(empty($data)){
-                throw new \Exception("Burguer não informado.");
-            }
             $user = new User();
+            $user->setFeilds('email, instagram, endereco, horario');
 
             $select = $user->findBy('id_user', 1);
 
             if(!$select){
-                throw new \Exception("Burguer não cadastrado");
+                throw new \Exception("Usuário não encontrado");
             }
 
             $request = Request::toJson(["success" => true, "data" => $select]);

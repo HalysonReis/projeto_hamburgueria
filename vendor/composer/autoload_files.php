@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'fc5cc959813e032c69da3bcdf40829f4' => $baseDir . '/App/Helpers/Csrf.php',
     '133f6a9f2c4761b57a29f93db5c2e4be' => $baseDir . '/App/Helpers/messageError.php',
+    '1e5095f21bd7c4998ed87615007ff828' => $baseDir . '/App/Helpers/UploadImage.php',
 );

@@ -13,7 +13,7 @@ class Routes{
                 "editar" => "UpdateController@index",
                 "editar/[0-9]+" => "SelectController@getProduto",
                 "usuario" => "UpdateController@user",
-                "usuario/[0-9]+" => "SelectController@getUser",
+                "usuario/listar" => "SelectController@getUser",
             ],
             "post" => [
                 "produto/editar/[0-9]+" => "UpdateController@editProduct",

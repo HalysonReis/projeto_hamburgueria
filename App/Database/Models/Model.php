@@ -34,7 +34,7 @@ abstract class Model {
             return $prepare->execute($data);
             
         } catch (\PDOException $e) {
-            messageError("Não foi possivel cadastrar o burguer");
+            messageError("Não foi possivel cadastrar o burger");
         }
     }
 
@@ -60,7 +60,7 @@ abstract class Model {
             return $prepare->execute($data);
             
         } catch (\PDOException $e) {
-            messageError("Não foi possivel editar");
+            messageError("Não foi possivel editar. Tente novamente mais tarde". $e->getMessage());
         }
     }
 
@@ -94,7 +94,7 @@ abstract class Model {
             return $prepare->fetch(\PDO::FETCH_ASSOC);
             
         } catch (\PDOException $e) {
-            messageError("Não foi possivel selecionar");
+            messageError("Não foi possivel selecionar ". $e->getMessage());
         }
     }
 
@@ -110,7 +110,7 @@ abstract class Model {
             return $prepare->execute([$field => $value]);
             
         } catch (\PDOException $e) {
-            messageError("Não foi possivel excluir o burguer");
+            messageError("Não foi possivel excluir o burger");
         }
     }
 }

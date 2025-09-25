@@ -4,6 +4,8 @@ async function fetchData(request) {
     if(!response.ok){
         const errorMessages = {
             400: "Dados inválidos. Verifique os campos e tente novamente.",
+            401: "Você precisa estar logado para realizar esta ação.",
+            403: "Ação não permitida. Token CSRF inválido ou ausente.",
             404: "O recurso solicitado não foi encontrado.",
             408: "Tempo de requisição excedido. Tente novamente.",
             409: "Já existe um registro com esses dados.",
@@ -21,7 +23,7 @@ async function fetchData(request) {
     }
     const contentType = response.headers.get("content-type");
     if(!contentType || !contentType.includes("application/json")){
-        throw {name: "InvalidContentType", message: "A requisição não é um JSON"}
+        throw {name: "InvalidContentType", message: "A requisição não é um JSON", request: response}
     }       
     let dataResponse = await response.json(); 
     if (!dataResponse.success) {

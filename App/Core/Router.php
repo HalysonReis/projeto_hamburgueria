@@ -14,6 +14,7 @@ class Router {
             $controller->excute($router);
 
         } catch (\Throwable $e) {
+            header('Content-Type: application/json');
             messageError($e->getMessage());
         }
     }

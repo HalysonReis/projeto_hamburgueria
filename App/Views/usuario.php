@@ -5,7 +5,7 @@ $paginaAtual = 'usuario';
     <?php include "./App/Views/includes/menu_produto.php";  ?>
     <main class="conteiner_principal">
         <h1>Editar Usuário</h1>
-        <form action="" method="post" class="formulario">
+        <form action="" method="post" class="formulario" id="formulario">
             <div class="content_input">
                 <label class="text_input">
                     E-mail:
@@ -41,11 +41,12 @@ $paginaAtual = 'usuario';
                 <label class="text_input">
                     Horário:
                 </label>
-                <input type="time" class="input" name="hora" id="hora">
+                <input type="time" class="input" name="horario" id="hora">
             </div>
+            <?php echo getToken(); ?>
             <div class="btns_content">
                 <button type="reset" class="btn_form btn_cancel" id="btn_cancel">Cancel</button>
-                <button type="submit" class="btn_form btn_submit" id="btn_cadastro">Editar</button>
+                <button type="submit" class="btn_form btn_submit" id="btn_confirmar">Editar</button>
             </div>
         </form>
     </main>

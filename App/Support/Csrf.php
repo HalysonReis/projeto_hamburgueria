@@ -16,7 +16,7 @@ class Csrf {
 
     public static function validateToken(){
         if(!isset($_SESSION["token"])){
-            throw new \Exception("Token inválidooooooooo");
+            throw new \Exception("Token inválido");
         }
 
         $token = Request::all()['token'];
@@ -25,7 +25,6 @@ class Csrf {
             throw new \Exception("Token inválido");
         }
 
-        unset($_SESSION['token']);
 
         return true;
     }

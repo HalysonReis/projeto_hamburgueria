@@ -1,4 +1,4 @@
-<form action="./produto/editar/1" method="post" class="formulario" id="formulario">
+<form action="" method="post" class="formulario" id="formulario">
     <div class="content_img">
         <p class="text_input">
             Imagem:

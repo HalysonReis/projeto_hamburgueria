@@ -13,7 +13,8 @@
         },
         "files":[
             "App/Helpers/Csrf.php",
-            "App/Helpers/messageError.php"
+            "App/Helpers/messageError.php",
+            "App/Helpers/UploadImage.php"
         ]
     },
     "require": {}

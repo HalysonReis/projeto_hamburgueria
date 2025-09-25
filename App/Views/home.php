@@ -21,7 +21,7 @@
                     </div>
                     <div class="content_sobre_inferior">
                         <i class="bi bi-instagram icon"></i>
-                        <p class="local_text">@Honório’sBurguer</p>
+                        <p class="local_text">@Honório’sBurger</p>
                     </div>
                 </div>
             </div>

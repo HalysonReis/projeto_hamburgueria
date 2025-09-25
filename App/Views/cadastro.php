@@ -8,5 +8,6 @@ $paginaAtual = 'cadastro';
         <?php include "./App/Views/includes/form_lanche.php";  ?>
     </main>
     <script src="./Public/js/formulario.js"></script>
+    <script src="./Public/js/cadastro.js"></script>
 </body>
 </html>

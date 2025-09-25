@@ -1,11 +1,39 @@
 <?php
 namespace App\Controllers;
 
-use App\Support\ShowPages;
+use App\Core\Request;
+use App\Database\Models\Product;
 
-class UpdateController {
+class DeleteController {
     public function produto($data){
-        var_dump($data);
+        try {
+            header('Content-Type: application/json');
+
+            $id = $data[0];
+
+            $product = new Product();
+            
+            $burger = $product->findBy("id_burguer", $id);
+
+            if(!deleteImage($burger['src_imagem'])){
+                throw new \Exception("Não foi possivel excluir o burger", 1);
+            }
+
+            $delete = $product->delete('id_burguer', $id);
+
+            if(!$delete){
+                throw new \Exception("Não foi possivel excluir o burger", 1);
+            }
+
+            $request = Request::toJson(["success" => true, "data" => $delete]);
+            echo $request;
+        } catch (\Exception $e) {
+            if($e->getCode() == 1){
+                messageError($e->getMessage());
+            }
+            messageError();
+        }
+        
     }
 
 }
